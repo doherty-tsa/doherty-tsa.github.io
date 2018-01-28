@@ -45,7 +45,6 @@ Home Hero
   left:0;
   width:100vw;
   z-index:-1;
-  background:rgba(19,20,23, 0.9);
 }
 
 .header-content{
@@ -184,7 +183,6 @@ Location
 -------------------------------- */
 
 #colorado-springs-parallax {
-    background:rgba(19,20,23, 0.9);
     height: 500px;
     border-bottom: 2px solid #C3C1BF;
 }
@@ -301,7 +299,6 @@ Curriculum Overview
 -------------------------------- */
 #curriculum-overview {
     text-align: center;
-    background:rgba(19,20,23, 0.9);
     border-bottom: 2px solid #C3C1BF;
 }
 
@@ -551,7 +548,6 @@ Team
     font-size: 16px;
     font-weight: 200;
     height: 610px;
-     background:rgba(19,20,23, 0.8);
     border-top: 2px solid #C3C1BF;
     border-bottom: 2px solid #C3C1BF;;
 }
@@ -698,7 +694,6 @@ Competitive Activities
 
 -------------------------------- */
 #competitive-activities{
-    background:rgba(19,20,23, 0.9);
     height: 550px;
     border-bottom: 2px solid #8EAEBD;
 }
