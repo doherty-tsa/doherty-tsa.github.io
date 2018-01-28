@@ -1,0 +1,131 @@
+
+/* body, generic */
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    text-align: justify;
+    text-decoration: none;
+    letter-spacing: 1px;
+    max-width: 100%;
+    max-height: 100%;   
+}
+
+
+/* Non Hover Related NavBar*/
+
+.cd-navigation {
+    width: 100%;
+    position: absolute;
+    min-height: 40%;
+}
+
+.cd-auto-hide-header {
+  background: none;
+
+}
+
+.cd-auto-hide-header::after {
+    
+    
+  background: #A2C8CD;
+  content: '';
+  display: table;
+  clear: both;
+    
+
+}
+
+
+nav {
+  float: inherit;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+}
+/* every item in the navigation bar list has "nav li" traits, for example change the margin to space each unordered list item out*/
+nav li {
+  display: inline-block;
+  margin-left: 10%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+/* "nav a" HOVER effect*/
+nav a:hover {
+  color: white;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: lightblue;
+  position: absolute;
+  bottom:0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+
+}
+
+nav a:hover::before {
+    
+    
+  width: 100%;
+    
+
+}
+
+/*end of nav a hover effect*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* bottom layer html color*/
+html {
+    
+    background-color: #EDEAE5;
+    
+}
+/* end of html*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cd-primary-nav {
+    
+    
+    position: fixed;
+    
+    
+}
+
