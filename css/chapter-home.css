@@ -142,12 +142,10 @@ Analytics
 #analytics {
     height: 200px;
     background: #262C36;
-    margin: -8px;
-    border-top: 4px solid #C3C1BF;
+    border-top: 2px solid #C3C1BF;
     text-align: center;
     border-bottom: 4px solid #C3C1BF;
     margin-bottom: -1px;
-    width: 100%;
 }
 
 .row {
@@ -1119,9 +1117,47 @@ canvas#demo-canvas {
 Creed
 
 -------------------------------- */
-
+.community-service {
+    position: absolute;
+    right: 15vw;
+    margin-top:-230px;
+}
 .creed {
-   height: 250px;
+   height: 340px;
    background: url(/img/banners/quote-area.jpg);
    border-bottom: 2px solid #C3C1BF;
+}
+
+.creed > p {
+    padding-top:20px;
+    margin-left:10vw;
+    width:53vw;
+    padding-top:50px;
+}
+span.moddo {
+    font-size:25pt;
+    font-family: Quicksand,'Raleway',Lato,'Georgia';
+    font-style: italic;
+    transition: 0.35s all ease;
+    margin-left:0vw;
+    border-bottom: 1px dashed #C2C0BE;
+}
+
+@media only screen and (max-width:1580px) {
+    .community-service {
+        transform: scale(0.7);
+    }
+}
+@media only screen and (max-width:1200px) {
+    .community-service {
+        display: none;
+    }
+    .creed > p {
+        width: 80%;
+    }
+}
+@media only screen and (max-width:800px) {
+   .moddo-text {
+        display: none;
+    }   
 }
