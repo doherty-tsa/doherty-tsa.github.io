@@ -273,6 +273,14 @@ $(function(){
     });
 });
 
+$(function(){
+    $("#btn-timeline").click(function(e){
+        e.preventDefault();
+        $path=$("#cd-timeline").offset().top;
+        $('body,html').animate({scrollTop:$path},1500);
+    });
+});
+
 // Scroll to Top
 
 $(window).scroll(function() {
