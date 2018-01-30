@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="/css/chapter-history.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.3.15/slick.css">
 <link rel="stylesheet" href="/css/chapter-styles.css">  
+<link rel="stylesheet" href="/css/libraries/imagehover.min.css">       
 <link rel="stylesheet" href="/css/libraries/hover-min.css">   
 <link rel="stylesheet" href="/css/libraries/animate.min.css"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -138,19 +139,19 @@
       <div class="cd-half-width">
         <div class="service-cards" style="margin-top:-110px;">
         <div id="app" class="container">
-          <card data-image="http://www.ravenwindow.com/images/RavenWindow-Website_Project-Images_Colorado-Care-and-Share-01.jpg">
+          <card class="card-service" data-image="http://www.ravenwindow.com/images/RavenWindow-Website_Project-Images_Colorado-Care-and-Share-01.jpg">
             <h1 slot="header">Care & Share</h1>
             <p slot="content">Student leaders at Doherty High School regularly help out at local food banks.</p>
           </card>
-          <card data-image="https://cdn.csgazette.biz/cache/r960-783f3f6b15ec76a6ccfc803eb58a309b.jpg">
+          <card class="card-service"  data-image="https://cdn.csgazette.biz/cache/r960-783f3f6b15ec76a6ccfc803eb58a309b.jpg">
             <h1 slot="header">PPLD</h1>
             <p slot="content">The Pikes Peak Library District, serving our local community, welcomes student volunteers to help with tutoring, book reviews, or other subjects.</p>
           </card>
-          <card data-image="http://www.indiaeducation.net/imagesvr_ce/6985/collegepapers.jpg">
+          <card class="card-service"  data-image="http://www.indiaeducation.net/imagesvr_ce/6985/collegepapers.jpg">
             <h1 slot="header">DHS Tutoring</h1>
             <p slot="content">The Spartan Tutoring Center pays thanks to TSA & other volunteers, who help out struggling students..</p>
           </card>
-          <card data-image="https://infotel.ca/news/medialibrary/image/orig-mediaitemid41099-3122.jpg">
+          <card class="card-service" data-image="https://infotel.ca/news/medialibrary/image/orig-mediaitemid41099-3122.jpg">
             <h1 slot="header">DHS Cleanup</h1>
             <p slot="content">With such a large campus, waste is bound to accumulate in large numbers, and our clean up crew helps cut down on this.</p>
           </card>
@@ -164,16 +165,66 @@
 
     <li class="cd-bg-video">
       <div class="cd-full-width">
-        <h2>Slide title here</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
-        <a href="#0" class="cd-btn">Learn more</a>
-      </div>
-      <!-- .cd-full-width -->
+        
+	<main class="team-slider">
+		<section id="cd-team" class="cd-section">
+			<div class="cd-container">
+				<ul style="display:flex;transform:translateX(-1350px);margin-top:-120px;">
+					<li>
+                        <a href="#0" data-type="member-1">
+                            <div class="project-circle" style="margin-left:1250px;"><div class="project-sub-circle hvr-grow" style="background:url(/img/captions/project-breadboard-thumbnail.jpg)"><span class="subtitle-project"></span></div></div>
+                        </a>
+					</li>
+					<li>
+                        <a href="#0" data-type="member-2">
+                            <div class="project-circle" style="margin-left:850px;"><div class="project-sub-circle hvr-grow" style="background:url(/img/captions/project-catapult-thumbnail.jpg);"></div></div>       
+                        </a>
+					</li>
+ 					<li>
+                        <a href="#0" data-type="member-3">
+                            <div class="project-circle" style="margin-left:400px;"><div class="project-sub-circle hvr-grow" style="background:url(/img/captions/project-drone-thumbnail.jpg);"></div></div>        
+                        </a>
+					</li>                   
+				</ul>
+			</div> <!-- cd-container -->
+		</section> <!-- cd-team -->
 
-      <div class="cd-bg-video-wrapper" data-video="assets/video/video">
-        <!-- video element will be loaded using jQuery -->
+		<div class="cd-overlay"></div>
+	</main>
+
+	
+	<div class="cd-member-bio member-1">
+		<div class="cd-member-bio-pict">
+			<img src="/img/captions/project-breadboard.jpg" alt="Member Bio image">
+		</div> <!-- cd-member-bio-pict -->
+
+		<div class="cd-bio-content">
+			<h1>Student-Built Breadboards</h1>
+			<p></p>
+			<p></p>
+		</div> <!-- cd-bio-content -->
+	</div> <!-- cd-member-bio -->
+	<div class="cd-member-bio member-2">
+		<div class="cd-member-bio-pict">
+			<img src="/img/captions/project-catapult.jpg" alt="Member Bio image">
+		</div> <!-- cd-member-bio-pict -->
+
+		<div class="cd-bio-content">
+			<h1>Catapult Build Competition</h1>
+			<p style="font-size:14pt;text-align:left;margin-right:-500px;color:#fff;margin-left:120px;">Having finished off our drone-building project, the team then reserved some time to reflect upon the successes and failures of their past collaboration experience and made the decision to dedicate each passing year to a new theme of technology. <br><br>While we had delved deep into the field of digital electronics, a rising number of 'Principles of Engineering (POE)' students fueled the demand for a mechanical, tech creation.<br><br> With that in mind, a wooden catapult seemed the perfect fit for our team. As a means to get the process started, we spent a few days researching various designs, skimming over their strengths and drawbacks.<br><br>Armed with this preparation, we then sought out to construct models in CAD or through paper-sketching, before diving head-in to the hands-on construction. Using the plentiful resources of our technology labs, we blew through the build process within the span of roughly 2 weeks.<br><br>Whereas with the last project, we worked collaboratively on a drone, in this instance, we structured the event more as a competition, where each student (or group of students) would design independent of the others. <br><br>Under this framework, we held a tournament at lunch to celebrate the team's project, attracting students from all sorts of niches and inviting them to share lunch with us in the technology labs. Our final winners were Hailey ONeal, Ben Gokey, and Wiley Neumeyer, who proved their innovative spirit. <br><br><br><br>  </p>
+		</div> <!-- cd-bio-content -->
+	</div> <!-- cd-member-bio -->
+	<div class="cd-member-bio member-3">
+		<div class="cd-member-bio-pict">
+			<img src="/img/captions/project-drone.jpg" alt="Member Bio image">
+		</div> <!-- cd-member-bio-pict -->
+
+		<div class="cd-bio-content">
+			<h1>Collaborative Drone Build</h1>
+			<p style="font-size:14pt;text-align:left;margin-right:-500px;color:#fff;margin-left:120px;">As part of the 2014-15 school year, during which TSA was founded, club leaders arranged to  build custom drones as a way to kick off the school's experimentation in areas of technology. Our aim was to teach club members that technology could extend beyond the classroom and engage with students on a new level.<br><br>Over the course of 4 weeks, spanning from the start to the end of January, we used the 'DJI F450 Flame Wheel ARF' as a base kit, piling on additional technologies as we went along. The project gained especial popularity amongst Digital Electronics students, who tied their knowledge of electronical composition into the build. <br><br> In the end, with a few weeks worth of work behind our backs, we waited for opportune weather to test out the drones, which are now resting, strung across our technology classrooms.<br><br><br><br>  </p>
+		</div> <!-- cd-bio-content -->
+	</div> <!-- cd-member-bio -->
       </div>
-      <!-- .cd-bg-video-wrapper -->
     </li>
 
     <li>
@@ -415,7 +466,7 @@
                     </div>
               </div>
     <div class="bottom-bar">
-        <a href="https://www.d11.org/doherty" target="_blank">Thomas B. Doherty High School TSA © 2018 </a> | Coding by  <a href="https://github.com/EthanMcFarlin" target="_blank">Ethan McFarlin</a> | Planning By <a href="https://github.com/taylorharkley" target="_blank">Taylor Harkley</a> & <a href="mailto:haley.oneil@d11.org"> Hailey ONeil</a> | No templates in use
+        <a href="https://www.d11.org/doherty" target="_blank">Thomas B. Doherty High School TSA © 2018 </a> | Project by  <a href="https://github.com/EthanMcFarlin" target="_blank">Ethan McFarlin</a>, <a href="https://github.com/taylorharkley" target="_blank">Taylor Harkley,</a> & <a href="mailto:haley.oneil@d11.org"> Hailey ONeil</a> | No templates in use
     </div>
         </footer>
     <script language="JavaScript" type="text/javascript" src="/js/libraries/jquery-3.2.1.min.js"></script> 
