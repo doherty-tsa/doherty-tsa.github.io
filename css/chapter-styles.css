@@ -30,6 +30,43 @@ a {
 
 /* -------------------------------- 
 
+Future Plans
+
+-------------------------------- */
+
+#future-plan {
+    background: url(/img/banners/future-plan.jpg);
+    border-bottom: 2px solid #C3C1BF;
+}
+
+#section-merger {
+    width: 80%;
+    background: #fff;
+    margin: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .48);
+    transform:translateY(50px);
+    border-bottom: 6px solid #84A9B7;
+    margin-bottom:100px;
+}
+#section-merger > h1 {
+    color: #636C6E;
+    border-bottom: 1px solid #BABCBD;
+    width: 40%;
+    padding-top:20px;
+    margin-left:4vw;
+    font-family: 'Raleway', 'Open Sans', 'Lato', 'Georgia';
+}
+#section-merger > p {
+    color: #929095;
+    font-family: 'Raleway', 'Open Sans', 'Lato', 'Georgia';
+    width: 96%;
+    padding-left:4vw;
+    padding-top:25px;
+    margin-bottom:30px;
+}
+
+/* -------------------------------- 
+
 New Home Hero
 
 -------------------------------- */
