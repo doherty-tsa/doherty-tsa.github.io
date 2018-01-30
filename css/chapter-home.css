@@ -599,7 +599,7 @@ Team
     border-radius: 100px;
 }
 #aker {
-    background: url(/img/captions/aker.jpg);
+    background: url(/img/captions/truex.jpg);
 }
 #neumeyer-j {
     background: url(/img/captions/neumeyer-j.jpg);
@@ -693,10 +693,7 @@ a.btn-standard {
 Competitive Activities
 
 -------------------------------- */
-#competitive-activities{
-    height: 550px;
-    border-bottom: 2px solid #8EAEBD;
-}
+
 .activities-text {
     float:right;
     width: 40%;
@@ -813,15 +810,7 @@ Competitive Activities
   font-size: 10px;
 }
 
-@media screen and (max-width: 480px) {
-  .slick-codepen, .slick-codepen .slick-slide {
-    height: 220px;
-  }
 
-  .wrapper {
-    width: 100%;
-  }
-}
 
 @media only screen and (max-width:880px) {
     .activities-text p {

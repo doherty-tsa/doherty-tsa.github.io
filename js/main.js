@@ -273,6 +273,14 @@ $(function(){
     });
 });
 
+$(function(){
+    $("#btn-timeline").click(function(e){
+        e.preventDefault();
+        $path=$("#cd-timeline").offset().top;
+        $('body,html').animate({scrollTop:$path},1500);
+    });
+});
+
 // Scroll to Top
 
 $(window).scroll(function() {
@@ -455,3 +463,238 @@ jQuery(document).ready(function($){
 		});
 	});
 });
+
+// Service Cards
+
+Vue.config.devtools = true;
+
+Vue.component('card', {
+  template: '\n    <div class="card-wrap"\n      @mousemove="handleMouseMove"\n      @mouseenter="handleMouseEnter"\n      @mouseleave="handleMouseLeave"\n      ref="card">\n      <div class="card"\n        :style="cardStyle">\n        <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>\n        <div class="card-info">\n          <slot name="header"></slot>\n          <slot name="content"></slot>\n        </div>\n      </div>\n    </div>',
+  mounted: function mounted() {
+    this.width = this.$refs.card.offsetWidth;
+    this.height = this.$refs.card.offsetHeight;
+  },
+
+  props: ['dataImage'],
+  data: function data() {
+    return {
+      width: 0,
+      height: 0,
+      mouseX: 0,
+      mouseY: 0,
+      mouseLeaveDelay: null
+    };
+  },
+  computed: {
+    mousePX: function mousePX() {
+      return this.mouseX / this.width;
+    },
+    mousePY: function mousePY() {
+      return this.mouseY / this.height;
+    },
+    cardStyle: function cardStyle() {
+      var rX = this.mousePX * 30;
+      var rY = this.mousePY * -30;
+      return {
+        transform: 'rotateY(' + rX + 'deg) rotateX(' + rY + 'deg)'
+      };
+    },
+    cardBgTransform: function cardBgTransform() {
+      var tX = this.mousePX * -40;
+      var tY = this.mousePY * -40;
+      return {
+        transform: 'translateX(' + tX + 'px) translateY(' + tY + 'px)'
+      };
+    },
+    cardBgImage: function cardBgImage() {
+      return {
+        backgroundImage: 'url(' + this.dataImage + ')'
+      };
+    }
+  },
+  methods: {
+    handleMouseMove: function handleMouseMove(e) {
+      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
+      this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2;
+    },
+    handleMouseEnter: function handleMouseEnter() {
+      clearTimeout(this.mouseLeaveDelay);
+    },
+    handleMouseLeave: function handleMouseLeave() {
+      var _this = this;
+
+      this.mouseLeaveDelay = setTimeout(function () {
+        _this.mouseX = 0;
+        _this.mouseY = 0;
+      }, 1000);
+    }
+  }
+});
+
+var app = new Vue({
+  el: '#app'
+});
+
+// Team Member Slider
+
+jQuery(document).ready(function($){
+	var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+
+	//open team-member bio
+	$('#cd-team').find('ul a').on('click', function(event){
+		event.preventDefault();
+		var selected_member = $(this).data('type');
+		$('.cd-member-bio.'+selected_member+'').addClass('slide-in');
+		$('.cd-member-bio-close').addClass('is-visible');
+
+		// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+		if( is_firefox ) {
+			$('main').addClass('slide-out').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				$('body').addClass('overflow-hidden');
+			});
+		} else {
+			$('main').addClass('slide-out');
+			$('body').addClass('overflow-hidden');
+		}
+
+	});
+
+	//close team-member bio
+	$(document).on('click', '.cd-overlay, .cd-member-bio-close', function(event){
+		event.preventDefault();
+		$('.cd-member-bio').removeClass('slide-in');
+		$('.cd-member-bio-close').removeClass('is-visible');
+
+		if( is_firefox ) {
+			$('main').removeClass('slide-out').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				$('body').removeClass('overflow-hidden');
+			});
+		} else {
+			$('main').removeClass('slide-out');
+			$('body').removeClass('overflow-hidden');
+		}
+	});
+});
+
+// Competitive Activities Slider
+
+(function($){
+$(function(){
+  $('.before-wrapper').on( "mousemove", function(e) {
+    var offsets = $(this).offset();
+    var fullWidth = $(this).width();
+    var mouseX = e.pageX - offsets.left;
+
+    if (mouseX < 0) { mouseX = 0; }
+    else if (mouseX > fullWidth) { mouseX = fullWidth }
+
+
+    $(this).parent().find('.comparison-slider').css({
+      left: mouseX,
+      transition: 'none'
+    });
+    $(this).find('.after-wrapper').css({
+      transform: 'translateX(' + (mouseX) + 'px)',
+      transition: 'none'
+    });
+    $(this).find('.after-image').css({
+      transform: 'translateX(' + (-1*mouseX) + 'px)',
+      transition: 'none'
+    });
+  });
+  $('.slider-wrapper').on( "mouseleave", function() {
+    $(this).parent().find('.comparison-slider').css({
+      left: '50%',
+      transition: 'all .3s'
+    });
+    $(this).find('.after-wrapper').css({
+      transform: 'translateX(50%)',
+      transition: 'all .3s'
+    });
+    $(this).find('.after-image').css({
+      transform: 'translateX(-50%)',
+      transition: 'all .3s'
+    });
+  });
+
+}); 
+})(jQuery); 
+
+// Projects Slider
+
+$(document).ready(function(event){
+	var projectsContainer = $('.cd-projects-container'),
+		navigation = $('.cd-primary-nav'),
+		triggerNav = $('.cd-nav-trigger'),
+		logo = $('.cd-logo');
+	
+	triggerNav.on('click', function(){
+		if( triggerNav.hasClass('project-open') ) {
+			//close project
+			projectsContainer.removeClass('project-open').find('.selected').removeClass('selected').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				$(this).children('.cd-project-info').scrollTop(0).removeClass('has-boxshadow');
+
+			});
+			triggerNav.add(logo).removeClass('project-open');
+		} else {
+			//trigger navigation visibility
+			triggerNav.add(projectsContainer).add(navigation).toggleClass('nav-open');
+		}
+	});
+
+	projectsContainer.on('click', '.single-project', function(){
+		var selectedProject = $(this);
+		if( projectsContainer.hasClass('nav-open') ) {
+			//close navigation
+			triggerNav.add(projectsContainer).add(navigation).removeClass('nav-open');
+		} else {
+			//open project
+			selectedProject.addClass('selected');
+			projectsContainer.add(triggerNav).add(logo).addClass('project-open');
+		}
+	});
+
+	projectsContainer.on('click', '.cd-scroll', function(){
+		//scroll down when clicking on the .cd-scroll arrow
+		var visibleProjectContent =  projectsContainer.find('.selected').children('.cd-project-info'),
+			windowHeight = $(window).height();
+
+		visibleProjectContent.animate({'scrollTop': windowHeight}, 300); 
+	});
+
+	//add/remove the .has-boxshadow to the project content while scrolling 
+	var scrolling = false;
+	projectsContainer.find('.cd-project-info').on('scroll', function(){
+		if( !scrolling ) {
+		 	(!window.requestAnimationFrame) ? setTimeout(updateProjectContent, 300) : window.requestAnimationFrame(updateProjectContent);
+		 	scrolling = true;
+		}
+	});
+
+	function updateProjectContent() {
+		var visibleProject = projectsContainer.find('.selected').children('.cd-project-info'),
+			scrollTop = visibleProject.scrollTop();
+		( scrollTop > 0 ) ? visibleProject.addClass('has-boxshadow') : visibleProject.removeClass('has-boxshadow');
+		scrolling = false;
+	}
+});
+
+// Our Curriculum Header
+
+var heroShinker = function() {
+    var hero = $('.hero-nav'),
+        heroHeight = $('.hero-nav').outerHeight(true);
+        $(hero).parent().css('padding-top', heroHeight);
+    $(window).scroll(function() {
+        var scrollOffset = $(window).scrollTop();
+        if (scrollOffset < heroHeight) {
+            $(hero).css('height', (heroHeight - scrollOffset));
+        }
+        if (scrollOffset > (heroHeight - 215)) {
+            hero.addClass('fixme');
+        } else {
+            hero.removeClass('fixme');
+        };
+    });
+}
+heroShinker();
