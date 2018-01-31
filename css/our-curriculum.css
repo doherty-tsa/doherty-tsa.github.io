@@ -168,6 +168,78 @@ Curriculum Icons
 
 /* -------------------------------- 
 
+Video Player
+
+-------------------------------- */
+.vid-container {
+  width: 1100px;
+  height: 400px;
+  margin:auto;
+  margin-top:40px;
+  transform:translateX(150px);
+  margin-bottom:80px;
+}
+/* tabbed menu */
+
+#menu {
+  float: right;
+  padding: 0;
+  padding-right: 120px;
+  margin: 0;
+  color: #fff;
+  font-family: arial, helvetica, sans-serif;
+  white-space: nowrap;
+  list-style-type: none;
+}
+
+#menu li {
+  display: inline;
+}
+
+#menu li input {
+  min-width: 50px;
+  height: 30px;
+  padding: 0.2em 1em;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  text-decoration: none;
+  float: left;
+  border: 1px solid #fff;
+  margin-right:19px;
+}
+
+.button {
+  background: rgba(0,0,0,0.5);
+}
+
+#menu li input:hover {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+/* player with playlist */
+
+.video-js {
+  width: 640px !important;
+  height: 360px !important;
+  float: left;
+  margin-right:-10px;
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.2);
+}
+
+.myplayer {
+  clear: both;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.vjs-playlist {
+  width: 330px;
+  height: 360px;
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.2);
+}
+/* -------------------------------- 
+
 Course Types
 
 -------------------------------- */
