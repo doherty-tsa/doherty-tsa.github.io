@@ -14,8 +14,6 @@ body {
 
 
 
-
-
 nav {
   float: inherit;
 }
@@ -83,50 +81,19 @@ nav a:hover::before {
 html {
     
     background-color: black;
+    font-size: 50%;
     
-}
-/* end of html*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-cd-primary-nav {
-    
-    
-    position: fixed;
-    
-    
-}
-
-/* -------------------------------- 
-
-Primary style
-
--------------------------------- */
-*, *::after, *::before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* end of html*/
 
-html {
-  font-size: 50%;
-}
+
+
+
 
 body {
   font-family: "Source Sans Pro", sans-serif;
