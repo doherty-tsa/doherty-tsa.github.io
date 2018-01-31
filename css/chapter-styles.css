@@ -731,3 +731,24 @@ footer a:hover {
         content: url("/img/logos/minature-logo.png");
     }
 }
+
+/* -------------------------------- 
+
+Curriculum Overview
+
+-------------------------------- */
+#curriculum-overview {
+    text-align: center;
+    border-bottom: 2px solid #C3C1BF;
+}
+
+.location-row {
+    display: inline-block;
+    margin: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-right: 1px solid #8EAEBD;
+    border-left: 1px solid #8EAEBD;
+    border-top: 2px solid #AC966Q
+}
+
