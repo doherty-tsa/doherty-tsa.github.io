@@ -56,6 +56,7 @@ Home Hero
   font-size:50px;
   margin-bottom:0;
   line-height: 3rem;
+  min-width:690px;
 }
 .arc {
     color: #fff;
@@ -71,7 +72,23 @@ Home Hero
   padding-left: 10vw;
   padding-right: 10vw;
 }
-
+@media only screen and (max-width:600px) {
+    .header-content p {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+@media only screen and (max-width:470px) {
+    .header-content p {
+        padding-left: 200px;
+        padding-right:200px;
+    }
+}
+@media only screen and (max-width:300px) {
+    .header-content p {
+        display: none;
+    }
+}
 .header-content > div > .btn{
   color:#fff;
   font-size:1.2rem;
@@ -552,14 +569,20 @@ Team
     border-bottom: 2px solid #C3C1BF;;
 }
 @media only screen and (max-width:1215px) {
+    #bonville-2 {
+        display:none;
+    }
+    #neumeyer-j-2 {
+        display:none;
+    }    
+}
+@media only screen and (max-width:845px) {
     #aker-2 {
         display:none;
     }
-}
-@media only screen and (max-width:845px) {
-    #neumeyer-c-2 {
+    #truex-2 {
         display:none;
-    }
+    }   
 }
 #team-home > h4,
 .h4{
@@ -830,11 +853,10 @@ Competitive Activities
 @media only screen and (max-width:700px) {
     div.wrapper{
         display: none;
-    }    
-    .activities-text {
-        margin-right:30vw;
-        text-align:center;
-    }        
+    }      
+    #competitive-activities {
+        display: none;
+    }
 }
 
 
@@ -856,13 +878,39 @@ Awards
     transform: scale(0.75);
     margin-top:-100px;
     margin-bottom:-85px;
+    height: 400px;
+    width: 400px;
 }
 #award-list {
     display: flex;
     align-content: center;
     justify-content: center;
 }
-
+@media only screen and (max-width:1200px) {
+    .award {
+        transform:scale(0.65);
+        margin-left:-50px;
+        margin-right:-50px;
+    }
+}
+@media only screen and (max-width:1000px) {
+    .award {
+        transform:scale(0.55);
+        margin-left:-70px;
+        margin-right:-70px;
+    }
+}
+@media only screen and (max-width:850px) {
+    .remove-future {
+        display: none;
+    }
+}
+@media only screen and (max-width:600px) {
+    .remove-future-2 {
+        display: none;
+    }
+    
+}
 /* -------------------------------- 
 
 Creed
@@ -878,6 +926,7 @@ Creed
    background: url(/img/banners/quote-area.jpg);
    border-bottom: 2px solid #C3C1BF;
    border-top: 2px solid #C3C1BF;
+    color: #fff;
 }
 
 .creed > p {
