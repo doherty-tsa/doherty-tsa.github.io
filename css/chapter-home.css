@@ -547,7 +547,7 @@ Team
     font-family: 'Raleway',sans-serif;
     font-size: 16px;
     font-weight: 200;
-    height: 610px;
+    height: 1500px;
     border-top: 2px solid #C3C1BF;
     border-bottom: 2px solid #C3C1BF;;
 }
@@ -570,7 +570,8 @@ Team
 .team-container {
     width:100%;
     padding-top:72px;
-    height: 500px;
+    height: 100px;
+    margin-bottom:1250px;
 }
 .team
 {
@@ -599,6 +600,9 @@ Team
     border-radius: 100px;
 }
 #aker {
+    background: url(/img/captions/aker.jpg);
+}
+#truex {
     background: url(/img/captions/truex.jpg);
 }
 #neumeyer-j {
@@ -606,6 +610,12 @@ Team
 }
 #neumeyer-c {
     background: url(/img/captions/neumeyer-c.jpg);    
+}
+#johnson {
+    background: url(/img/captions/johnson.jpg);    
+}
+#bonville {
+    background: url(/img/captions/bonville.jpg);    
 }
 
 .teamsocial
@@ -861,12 +871,13 @@ Creed
 .community-service {
     position: absolute;
     right: 15vw;
-    margin-top:-230px;
+     margin-top:-230px;
 }
 .creed {
    height: 340px;
    background: url(/img/banners/quote-area.jpg);
    border-bottom: 2px solid #C3C1BF;
+   border-top: 2px solid #C3C1BF;
 }
 
 .creed > p {

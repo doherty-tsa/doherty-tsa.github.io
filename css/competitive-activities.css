@@ -235,6 +235,7 @@ button {
   -o-transform: translateY(6px);
   transform: translateY(6px);
 }
+
 .cd-nav-trigger.project-open .cd-icon {
   /* user selects a projects - transform the icon into a 'X' */
   background-color: rgba(255, 255, 255, 0);
@@ -341,6 +342,9 @@ button {
   width: 100vw;
   position: relative;
   overflow: hidden;
+}
+.cd-projects-container.nav-open {
+  height: 0%;
 }
 .cd-projects-container .single-project {
   position: absolute;
