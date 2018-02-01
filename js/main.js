@@ -1,4 +1,3 @@
-
 // Navigation
 
 var nav = document.querySelector('.cd-auto-hide-header');
