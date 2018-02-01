@@ -1,7 +1,39 @@
 // Smooth-Scroll Buttons
 
 $(function(){
-    $("#scroll").click(function(e){
+    $("#products-btn").click(function(e){
+        e.preventDefault();
+        $path=$(".cd-builder-footer").offset().top;
+        $('body,html').animate({scrollTop:$path},1500);
+    });
+});
+
+$(function(){
+    $("#applications-btn").click(function(e){
+        e.preventDefault();
+        $path=$("#test").offset().top;
+        $('body,html').animate({scrollTop:$path},1500);
+    });
+});
+
+$(function(){
+    $("#technologies-btn").click(function(e){
+        e.preventDefault();
+        $path=$("#colorado-springs-parallax").offset().top;
+        $('body,html').animate({scrollTop:$path},1500);
+    });
+});
+
+$(function(){
+    $("#saftey-btn").click(function(e){
+        e.preventDefault();
+        $path=$("#colorado-springs-parallax").offset().top;
+        $('body,html').animate({scrollTop:$path},1500);
+    });
+});
+
+$(function(){
+    $("#potential-btn").click(function(e){
         e.preventDefault();
         $path=$("#colorado-springs-parallax").offset().top;
         $('body,html').animate({scrollTop:$path},1500);

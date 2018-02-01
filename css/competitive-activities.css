@@ -34,10 +34,6 @@ Competitive Activities Hero
 
 }
 
-.after-wrapper, .after-image {
-
-}
-
 .after-wrapper {
   overflow: hidden;
   position: absolute;
@@ -473,7 +469,7 @@ button {
   height: 300%;
   width: 100%;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;   min-height:900px;
 }
 .cd-title::after {
   /* line below title -  visible on hover */
@@ -492,6 +488,7 @@ button {
   -webkit-transition: -webkit-transform 0.2s;
   -moz-transition: -moz-transform 0.2s;
   transition: transform 0.2s;
+
 }
 .single-project:nth-of-type(1) .cd-title {
   background-color: #2978A0;
