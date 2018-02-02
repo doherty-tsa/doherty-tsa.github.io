@@ -11,15 +11,26 @@ $(function(){
 $(function(){
     $("#applications-btn").click(function(e){
         e.preventDefault();
-        $path=$("#test").offset().top;
+        $path=$("#applications").offset().top;
         $('body,html').animate({scrollTop:$path},1500);
     });
 });
 
 $(function(){
+    $("#close").click(function(e){
+        e.preventDefault();
+        $path=$("#applications").offset().top;
+        document.getElementById("close-fut").style.display = "none";
+        document.getElementById("height-adjust").style.height = "0px";
+        document.getElementById("footer-excess").style.display = "none";        
+    });
+});
+
+
+$(function(){
     $("#technologies-btn").click(function(e){
         e.preventDefault();
-        $path=$("#colorado-springs-parallax").offset().top;
+        $path=$("#technologies").offset().top;
         $('body,html').animate({scrollTop:$path},1500);
     });
 });
@@ -27,7 +38,7 @@ $(function(){
 $(function(){
     $("#saftey-btn").click(function(e){
         e.preventDefault();
-        $path=$("#colorado-springs-parallax").offset().top;
+        $path=$("#saftey-concerns").offset().top;
         $('body,html').animate({scrollTop:$path},1500);
     });
 });
@@ -35,7 +46,7 @@ $(function(){
 $(function(){
     $("#potential-btn").click(function(e){
         e.preventDefault();
-        $path=$("#colorado-springs-parallax").offset().top;
+        $path=$("#potential-impact").offset().top;
         $('body,html').animate({scrollTop:$path},1500);
     });
 });
@@ -103,14 +114,233 @@ jQuery(document).ready(function($){
 /* ---- particles.js config ---- */
 
 /* ---- particles.js config ---- */
-
+particlesJS("applications", {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 500
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#00C49C"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#007FE3",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+particlesJS("saftey-concerns", {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#00C49C"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#00D08F",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
 particlesJS("particles-js", {
   "particles": {
     "number": {
       "value": 150,
       "density": {
         "enable": true,
-        "value_area": 500
+        "value_area": 800
       }
     },
     "color": {
@@ -460,3 +690,28 @@ jQuery(document).ready(function($){
 		});
 	}
 });
+
+// Applications Tabs
+
+$(document).ready(function() { 
+
+	(function ($) { 
+		$('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
+		
+		$('.tab ul.tabs li a').click(function (g) { 
+			var tab = $(this).closest('.tab'), 
+				index = $(this).closest('li').index();
+			
+			tab.find('ul.tabs > li').removeClass('current');
+			$(this).closest('li').addClass('current');
+			
+			tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
+			tab.find('.tab_content').find('div.tabs_item:eq(' + index + ')').slideDown();
+			
+			g.preventDefault();
+		} );
+	})(jQuery);
+
+});
+
+
