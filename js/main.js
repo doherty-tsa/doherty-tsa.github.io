@@ -6,10 +6,10 @@ var position = 0;
 
 window.addEventListener('scroll', function(){
     if (window.pageYOffset >= ($('.cd-auto-hide-header').data('threshold'))) {
-        nav.classList += (" minified");
+        nav.className += (" minified");
     }
     else {
-        nav.classList.remove("minified");
+        nav.className.remove("minified");
     }
 })
 
