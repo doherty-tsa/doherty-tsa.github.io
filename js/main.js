@@ -9,7 +9,7 @@ window.addEventListener('scroll', function(){
         nav.className += (" minified");
     }
     else {
-        nav.className.remove("minified");
+        nav.classList.remove("minified");
     }
 })
 
