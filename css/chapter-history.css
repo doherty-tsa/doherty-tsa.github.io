@@ -820,6 +820,51 @@ Slider
     height: 680px;
   }
 }
+@media only screen and (max-width: 1170px) {
+    .ui_box {
+        margin-top:70px;
+    }
+    #header-text-container {
+        margin-top:150px;
+    }
+}
+@media only screen and (max-width: 915px) {
+    #rem-1, #rem-2 {
+        opacity:0;
+    }
+}
+@media only screen and (max-width: 1215px) {
+    #cd-remov-1 {
+       display:none;
+    }
+}
+@media only screen and (max-width: 955px) {
+    #cd-remov-2 {
+       display:none;
+    }
+}
+@media only screen and (max-width: 695px) {
+    #cd-remov-3 {
+       display:none;
+    }
+}
+@media only screen and (max-width: 1170px) {
+    .card-service {
+       padding-top:140px;
+    }
+}
+@media only screen and (max-width: 620px) {
+    #rem-3, #rem-4 {
+        opacity:0;
+    }
+    #bx-cont-1 {
+        margin-left:15vw;
+    }
+    #bx-cont-2 {
+        margin-left:15vw;
+    }
+}
+
 /* -------------------------------- 
 
 Single slide style

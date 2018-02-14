@@ -11,11 +11,34 @@ Competitive Activities Hero
   position: relative;
 }
 
-.slider-wrapper:hover { cursor: none; }
-
-.comparison-slider {
-
+@media only screen and (max-width: 900px) {
+    .cd-nav-trigger {
+        transform:translateY(150px);
+    }   
 }
+
+@media only screen and (max-width: 800px) {
+    .cd-nav-trigger {
+        transform:translateY(300px);
+    }   
+}
+@media only screen and (max-width: 625px) {
+    .cd-nav-trigger {
+        transform:translateY(500px);
+    }   
+}
+
+@media only screen and (max-width: 400px) {
+    .cd-nav-trigger {
+        transform:translateY(700px);
+    }   
+}
+@media only screen and (max-width: 350px) {
+    .cd-nav-trigger {
+        transform:translateY(1000px);
+    }   
+}
+.slider-wrapper:hover { cursor: none; }
 
 .before-wrapper {
   display: block;
