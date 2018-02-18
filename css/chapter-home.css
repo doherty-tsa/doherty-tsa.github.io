@@ -157,10 +157,9 @@ Analytics
 
 #analytics {
     height: 200px;
-    background: #262C36;
-    border-top: 2px solid #C3C1BF;
+    background: #343B44;
     text-align: center;
-    border-bottom: 4px solid #C3C1BF;
+    border-bottom: 2px solid #C3C1BF;
     margin-bottom: -1px;
 }
 
@@ -316,7 +315,7 @@ Twitter feed
 
 -------------------------------- */
 #twitter-feed {
-    background: #272A2D;
+    background: #343B44;
     border-bottom: 2px solid #C3C1BF;;
     padding:50px;
 }
@@ -522,7 +521,7 @@ Timeline
 
 -------------------------------- */
 #timeline {
-    background: #121518;
+    background: #343B44;
 }
 
 #timeline > iframe {
@@ -848,7 +847,7 @@ Awards
 -------------------------------- */
 
 #awards {
-    background: #181E31;
+    background: #343B44;
     border-bottom: 2px solid #C3C1BF;
 }
 
