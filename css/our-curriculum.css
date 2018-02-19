@@ -186,9 +186,9 @@ padding: 20px 0;
 width: 100%;
 max-width: 1100px;
 min-width: 440px;
-background: #fff;
+background: #33353D;
 margin: 0 auto;
-
+max-height:0px;
 }
 @media only screen and (max-width: 1150px) {
     .vid-main-wrapper {
@@ -226,7 +226,6 @@ padding-top: 30px;
 height: 0; 
 width:70%;
 float:left;
-
 }
 		 
 .vid-container iframe,
@@ -237,8 +236,9 @@ float:left;
  left: 0;
  width: 100%;
  min-height: 360px;
- box-shadow: 0 2px 8px rgba(0, 0, 0, .28);
+ margin-bottom:5px;
  border-bottom: 3px solid #89A9B8;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, .28);
 }
 
 /*  VIDEOS PLAYLIST 
@@ -247,8 +247,8 @@ float:left;
 width: 30%;
 height:360px;
 overflow: hidden;
-    float:right;
-		}
+float:right;
+}
 
 .vid-list-container:hover, .vid-list-container:focus {
 overflow-y: auto;
@@ -260,14 +260,16 @@ ol#vid-list {
     background: #222;
     float: left;
     width:90%;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, .48);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .48);
     height:100%;
-     border-bottom: 3px solid #89A9B8;
+    border-bottom: 3px solid #89A9B8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .28);
 }
 
     ol#vid-list li {
         list-style: none;
         height:70px;
+        border-bottom: 1px solid rgba(108,108,108,0.6);
     }
 
     ol#vid-list li a {
@@ -277,6 +279,7 @@ ol#vid-list {
       display:block;
       padding:10px;
       font-family: 'Raleway','Georgia','Open Sans';
+ 
     }
 
     ol#vid-list li a:hover, 
@@ -312,11 +315,11 @@ ol#vid-list {
 		}
 
 #merger-bottom-curriculum {
-    background: url(/img/banners/future-plan.jpg);
-    height: 300px;
-    transform:translateY(-250px);
-    margin-bottom:-260px;
+    background: url(/img/banners/future-plan-alt.jpg);
+    height: 584px;
+    margin-bottom:0px;
     border-bottom: 2px solid #C3C1BF;
+    padding-bottom:-100px;
 }
 /* -------------------------------- 
 
