@@ -868,7 +868,7 @@ $(document).ready(function () {
             postTitle: "Team President",
             postAbstract: "Hailey O'Neil has led TSA since her Junior year, and has cultivated an interest in engineering through her enrollment in PLTW classes.",
             postContent: "<p>As a graduating <strong>senior</strong> of the class of 2018, Hailey has plentiful experience with 'learning the ropes' of high school. During her time here at Doherty, she has amassed knowledge in a <strong>variety</strong> of technical disciplines, including Principles of Engineering, Architecture, & Computer Science. Her knowledge of these areas, coupled with her <strong>exemplary</strong> leadership qualities, makes her a role model for other students. She plans on matriculating to <strong>Colorado State University</strong> next fall.</p>",
-            postThumb: "https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_960_720.jpg",
+            postThumb: "/img/thumbnails/president.jpg",
             postImg: "/img/banners/team-president.jpg",
             postLink: "article-link1"
           },
@@ -876,7 +876,7 @@ $(document).ready(function () {
             postTitle: "Vice President",
             postAbstract: "Wiley Neumeyer, class of 2018, has participated in a multitude of efforts to increase club membership and promote our CTE program.</p>",
             postContent: "<p>Wiley is engaged most <strong>predominantly</strong> in community outreach efforts. His role within the team is <strong>centered</strong> around getting students excited about <strong>STEM</strong>. Using his strong <strong>communication</strong> skills, and drawing on his knowledge of <strong>advanced</strong> math and technology studies, he is able to effectively convey his <strong>love</strong> for science and technology. Wiley is planning on attending the <strong>University of Wyoming</strong> next fall.</p>",
-            postThumb: "https://cdn.pixabay.com/photo/2016/10/21/19/50/ashlin-1759048_960_720.jpg",
+            postThumb: "/img/thumbnails/vice-president.jpg",
             postImg: "https://pbs.twimg.com/media/DQUWNEvVwAAymK2.jpg:large",
             postLink: "article-link1"
           },
@@ -884,7 +884,7 @@ $(document).ready(function () {
             postTitle: "Other Officers",
             postAbstract: "Browse through our other office members, who serve equally as noteworthy contributions to the success and development of the team.",
             postContent: "<p><strong>Secretary - </strong> Ethan McFarlin (Class of 2020)<br><em>PLTW Courses: Introduction to Engineering, Introduction to Computer Science, Advanced Placement Computer Science Principles <br></em><br><strong>Treasurer - </strong> Taylor Harkley (Class of 2020)<br><em>PLTW Courses: Introduction to Engineering <br></em><br><strong>Sergeant-at-Arms - </strong> Christian Lewis (Class of 2019)<br><em>PLTW Courses: Introduction to Engineering, Principles of Engineering, Civil Engineering & Architecture <br></em><br><strong>Reporter - </strong> Jacob Wilson (Class of 2019)<br><em>PLTW Courses: Introduction to Engineering, Principles of Engineering, Civil Engineering & Architecture <br></em><br></p>",
-            postThumb: "https://cdn.pixabay.com/photo/2018/02/14/10/28/people-3152585_960_720.jpg",
+            postThumb: "/img/thumbnails/other-officers.jpg",
             postImg: "https://pbs.twimg.com/media/DQaYVI3VQAAsAeO.jpg:large",
             postLink: "article-link1"
           }
