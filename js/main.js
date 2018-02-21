@@ -860,3 +860,127 @@ $(document).ready(function () {
     $(this).addClass('selected'); 
   });
 });
+
+// Officer cards
+
+        var post=[
+          {
+            postTitle: "Team President",
+            postAbstract: "Hailey O'Neil has led TSA since her Junior year, and has cultivated an interest in engineering through her enrollment in PLTW classes.",
+            postContent: "<p>As a graduating <strong>senior</strong> of the class of 2018, Hailey has plentiful experience with 'learning the ropes' of high school. During her time here at Doherty, she has amassed knowledge in a <strong>variety</strong> of technical disciplines, including Principles of Engineering, Architecture, & Computer Science. Her knowledge of these areas, coupled with her <strong>exemplary</strong> leadership qualities, makes her a role model for other students. She plans on matriculating to <strong>Colorado State University</strong> next fall.</p>",
+            postThumb: "https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_960_720.jpg",
+            postImg: "/img/banners/team-president.jpg",
+            postLink: "article-link1"
+          },
+          {
+            postTitle: "Vice President",
+            postAbstract: "Wiley Neumeyer, class of 2018, has participated in a multitude of efforts to increase club membership and promote our CTE program.</p>",
+            postContent: "<p>Wiley is engaged most <strong>predominantly</strong> in community outreach efforts. His role within the team is <strong>centered</strong> around getting students excited about <strong>STEM</strong>. Using his strong <strong>communication</strong> skills, and drawing on his knowledge of <strong>advanced</strong> math and technology studies, he is able to effectively convey his <strong>love</strong> for science and technology. Wiley is planning on attending the <strong>University of Wyoming</strong> next fall.</p>",
+            postThumb: "https://cdn.pixabay.com/photo/2016/10/21/19/50/ashlin-1759048_960_720.jpg",
+            postImg: "https://pbs.twimg.com/media/DQUWNEvVwAAymK2.jpg:large",
+            postLink: "article-link1"
+          },
+          {
+            postTitle: "Other Officers",
+            postAbstract: "Browse through our other office members, who serve equally as noteworthy contributions to the success and development of the team.",
+            postContent: "<p><strong>Secretary - </strong> Ethan McFarlin (Class of 2020)<br><em>PLTW Courses: Introduction to Engineering, Introduction to Computer Science, Advanced Placement Computer Science Principles <br></em><br><strong>Treasurer - </strong> Taylor Harkley (Class of 2020)<br><em>PLTW Courses: Introduction to Engineering <br></em><br><strong>Sergeant-at-Arms - </strong> Christian Lewis (Class of 2019)<br><em>PLTW Courses: Introduction to Engineering, Principles of Engineering, Civil Engineering & Architecture <br></em><br><strong>Reporter - </strong> Jacob Wilson (Class of 2019)<br><em>PLTW Courses: Introduction to Engineering, Principles of Engineering, Civil Engineering & Architecture <br></em><br></p>",
+            postThumb: "https://cdn.pixabay.com/photo/2018/02/14/10/28/people-3152585_960_720.jpg",
+            postImg: "https://pbs.twimg.com/media/DQaYVI3VQAAsAeO.jpg:large",
+            postLink: "article-link1"
+          }
+        ];
+
+
+        /*
+        =====================
+        =====================
+        Thumbs
+        =====================
+        =====================
+        */
+        //Loop length:
+        var postLength = post.length;
+        //Empty container:
+        $(".posts-box").empty();
+        //Loop:
+        for (i=0; i<postLength; i++) {
+          //Create thumb structure:
+          var listItem =
+            '<li>'+
+              '<div class="card-2">'+
+                '<a class="button" href="'+post[i].postLink+'" data-obj="'+i+'">'+
+                  '<img src="'+post[i].postThumb+'" alt="">'+
+                '</a>'+
+                '<div>'+
+                  '<h3>'+post[i].postTitle+'</h3>'+
+                  '<p>'+post[i].postAbstract+'</p>'+
+                '</div>'+
+                '<div>'+
+                  '<a class="button" href="'+post[i].postLink+'" data-obj="'+i+'">Read More</a>'+
+                '</div>'+
+              '</div>'+
+            '</li>';
+          //Append thumb:
+          $(".posts-box").append(listItem);
+        };
+
+
+        /*
+        =====================
+        =====================
+        Inner post
+        =====================
+        =====================
+        */
+        var thisElement = 0;
+
+        function innerContent(content){
+          $(".inner-img").attr("src",post[content].postImg);
+          $(".inner-title").html(post[content].postTitle);
+          $(".inner-text").html(post[content].postContent);
+        };
+
+        //Open post:
+        $(".button").click(function(e){
+          e.preventDefault();
+          thisElement = $(this).attr("data-obj");
+          innerContent(thisElement);
+          $(".modal").css({"display":"block"});
+          dissBtn();
+        });
+
+        //Close post:
+        $(".close-post, .modal-sandbox").click(function(){
+          $(".modal").css({"display":"none"});
+        });
+
+        //Next post:
+        $(".next-post").click(function(e){
+          e.preventDefault();
+          if (thisElement<postLength-1) {
+            thisElement = parseInt(thisElement) + 1;
+            innerContent(thisElement);
+            dissBtn();
+          };
+        });
+
+        //Prev post:
+        $(".prev-post").click(function(e){
+          e.preventDefault();
+          if (thisElement>0) {
+            thisElement = parseInt(thisElement) - 1;
+            innerContent(thisElement);
+            dissBtn();
+          };
+        });
+
+        //Button disable:
+        function dissBtn(){
+          $(".prev-post, .next-post").removeClass("disabled");
+          if (thisElement<=0){
+            $(".prev-post").addClass("disabled");
+          }
+          else if (thisElement>=postLength-1){
+            $(".next-post").addClass("disabled");
+          };
+        };

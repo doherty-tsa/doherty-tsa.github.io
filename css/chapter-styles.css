@@ -172,7 +172,6 @@ canvas#demo-canvas {
   color: #fff;
   font-weight: bold;
   right: 0;
-  border-left: 1px solid #f2f2f2;
 }
 .cd-auto-hide-header .nav-trigger span {
   /* vertically align inside parent element */
@@ -249,7 +248,12 @@ canvas#demo-canvas {
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
+.section-transition-inverted {
+    height: 220px;
 
+    margin-top:0px;
+    background: url(/img/banners/curriculum-easer.jpg);
+}
 .cd-primary-nav {
   display: inline-block;
   float: right;
@@ -366,6 +370,16 @@ nav ul li a:before {
     transform:scale(0.8);
     margin-top:-130px;
 
+}
+@media only screen and (max-width:450px) {
+    .cd-auto-hide-header .logo {
+        margin-left:-105px;
+    }
+}
+@media only screen and (max-width:280px) {
+    .cd-auto-hide-header .logo {
+        display: none;;
+    }
 }
 
 /* -------------------------------- 
