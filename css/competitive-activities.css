@@ -1,100 +1,118 @@
 
 /* -------------------------------- 
 
-Competitive Activities Slider
+Competitive Activities Hero
 
 -------------------------------- */
 
-.comparison-slider-wrapper {
-  width: 100vw;
-  height: 700px;
+.slider-wrapper {
+  width: 100%;
+  height: 900px;
+  position: relative;
 }
 
-
-.comparison-slider-wrapper .comparison-slider {
-  width: 100vw;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.comparison-slider-wrapper .comparison-slider > img, .resize > img {
-  width: 100vw;
-  display: block;
-  min-height: 700px;
-}
-.comparison-slider-wrapper .comparison-slider .resize {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50vw;
-  overflow: hidden;
-}
-#reskin-1 {
-    background:url(/img/parallax/duel-slider-1.jpg) no-repeat scroll center transparent;
-}
-#reskin-2 {
-    background:url(/img/parallax/duel-slider-2.jpg) no-repeat scroll center transparent;
-}
-@media only screen and (max-width: 1250px) {
-    #reskin-2 {
-        background:url(/img/parallax/duel-slider-4.jpg) no-repeat scroll center transparent;
-    }
-    #reskin-1 {
-        background:url(/img/parallax/duel-slider-3.jpg) no-repeat scroll center transparent;
+@media only screen and (max-width: 900px) {
+    .cd-nav-trigger {
+        transform:translateY(150px);
     }   
 }
 
-.comparison-slider-wrapper .comparison-slider .divider {
+@media only screen and (max-width: 800px) {
+    .cd-nav-trigger {
+        transform:translateY(300px);
+    }   
+}
+@media only screen and (max-width: 625px) {
+    .cd-nav-trigger {
+        transform:translateY(500px);
+    }   
+}
+
+@media only screen and (max-width: 400px) {
+    .cd-nav-trigger {
+        transform:translateY(700px);
+    }   
+}
+@media only screen and (max-width: 350px) {
+    .cd-nav-trigger {
+        transform:translateY(1000px);
+    }   
+}
+.slider-wrapper:hover { cursor: none; }
+
+.before-wrapper {
+  display: block;
+  overflow: hidden;
+  width: auto;
+  height: 900px;
+  position: relative;
+  background: url("/img/parallax/duel-slider-1.jpg") no-repeat center center #111111;
+}
+
+.before-wrapper:before {
+  display: block;
+  content: '';
+  width: 100%; 
+  height:100%;
+
+}
+
+.after-wrapper {
+  overflow: hidden;
   position: absolute;
-  width: 2px;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
-  left: 50%;
   top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  margin-left: -1px;
-  cursor: ew-resize;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
 }
-.comparison-slider-wrapper .comparison-slider .divider:before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: -9px;
-  top: 50%;
-  margin-top: -10px;
-  background-color: white;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+
+.after-image {
+  display: block;
+  width: auto;
+  height: 900px;
+  position: relative;
+-webkit-transform: translateX(-50%);
+61
+  transform: translateX(-50%);
+
+  background: url("/img/parallax/duel-slider-2.jpg") no-repeat center center #efefef;
+
 }
-.comparison-slider-wrapper .comparison-slider .divider:after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  left: -5px;
-  top: 50%;
-  margin-top: -6px;
-  background-color: white;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+
+.past, .future{
+  padding: 40px;
+  color:#fff;
+  text-transform:uppercase;
+  font-size:20px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  font-weight:800;
 }
-.comparison-slider-wrapper .comparison-slider .divider.draggable:before {
-  width: 30px;
-  height: 30px;
-  left: -14px;
-  margin-top: -15px;
+
+.past {
+ position: absolute;
+ display: block;
+ bottom: 0px;
+ left:0px;
 }
-.comparison-slider-wrapper .comparison-slider .divider.draggable:after {
-  width: 20px;
-  height: 20px;
-  left: -9px;
-  margin-top: -10px;
-  background-color: #555;
+
+.you {
+  width: 200px;
+  height: 200px;
+ position: absolute;
+ display: block;
+ right:0px;
+ left: 0px;
+ z-index:999;
+ background: red;
+}
+
+.future {
+ position: absolute;
+ display: block;
+ bottom: 0px;
+ right:0px;
 }
 
 
