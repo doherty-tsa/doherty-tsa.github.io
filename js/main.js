@@ -28,7 +28,7 @@ jQuery(document).ready(function($){
 		//this applies only if secondary nav is below intro section
 		belowNavHeroContent = $('.sub-nav-hero'),
 		headerHeight = mainHeader.height();
-	
+
 	//set scrolling variables
 	var scrolling = false,
 		previousTop = 0,
@@ -984,4 +984,3 @@ $(document).ready(function () {
             $(".next-post").addClass("disabled");
           };
         };
-
