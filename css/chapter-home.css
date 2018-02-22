@@ -156,20 +156,33 @@ Analytics
 -------------------------------- */
 
 #analytics {
-    height: 200px;
-    background: #343B44;
-    text-align: center;
-    border-bottom: 2px solid #C3C1BF;
-    margin-bottom: -1px;
+    background:url(/img/banners/analytics-background.png) no-repeat scroll center top transparent; 
+    height: 350px;
+    z-index:50;
+    margin-top:-180px;
+    text-align:center;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .28);
+    margin-bottom:-30px;
 }
-
 .row {
     display: inline-block;
     text-align: center;
     margin: 5vw;
-    margin-top: 20px;
+    margin-top: 170px;
 }
-
+@media only screen and (Max-width: 1000px) {
+    #row-containers {
+        transform:translateY(140px);
+    }
+}
+@media only screen and (Max-width: 1000px) {
+    .bump-up {
+        display:none;
+    }
+}
+.bump-up {
+    transform:translateY(-45px);
+}
 .ct {
     color: #8EAEBD;
 }
@@ -199,7 +212,7 @@ Location
 -------------------------------- */
 
 #colorado-springs-parallax {
-    height: 500px;
+   padding-bottom:330px;
     border-bottom: 2px solid #C3C1BF;
 }
 
@@ -240,7 +253,7 @@ Location
 .springs-map img {
     z-index: 1;
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: -45px;
     transform: translateY(-160px)
 }
@@ -838,7 +851,7 @@ Competitive Activities
     div.wrapper{
         display: none;
     }      
-    #competitive-activities {
+    #competitive-activities, .activities-map {
         display: none;
     }
 }

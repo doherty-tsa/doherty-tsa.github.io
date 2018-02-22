@@ -984,3 +984,4 @@ $(document).ready(function () {
             $(".next-post").addClass("disabled");
           };
         };
+
