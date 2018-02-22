@@ -167,7 +167,7 @@ Analytics
     margin-bottom:-30px;
     position: absolute;
     z-index:5;
-    width:100vw;
+    width:99vw;
 }
 .row {
     display: inline-block;
