@@ -483,6 +483,46 @@ Return-to-Top
     }
 }
 
+.glow-btn {
+      animation: glowing 5000ms infinite;
+}
+@keyframes glowing {
+  0% { box-shadow: 0 0 -10px #4CBDFB; }
+  40% { box-shadow: 0 0 20px #4CBDFB; }
+  60% { box-shadow: 0 0 20px #4CBDFB; }
+  100% { box-shadow: 0 0 -10px #4CBDFB; }
+}
+
+
+/* -------------------------------- 
+
+Curriculum Overview
+
+-------------------------------- */
+#curriculum-overview {
+    text-align: center;
+    border-bottom: 2px solid #C3C1BF;
+}
+
+.location-row {
+    display: inline-block;
+    margin: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-right: 1px solid #8EAEBD;
+    border-left: 1px solid #8EAEBD;
+    border-top: 2px solid #AC966Q;
+    margin-bottom:180px;
+
+}
+
+#curriculum-overview > iframe {
+    margin-top:-65px;
+    margin-bottom:30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .28);
+    border-top: 2px solid #4CBDFB;
+}
+
 /* -------------------------------- 
 
 Scroll Indicator
