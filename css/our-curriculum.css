@@ -318,7 +318,7 @@ ol#vid-list {
     background: url(/img/banners/future-plan-alt.jpg);
     height: 584px;
     margin-bottom:0px;
-    border-bottom: 2px solid #C3C1BF;
+
     padding-bottom:-100px;
 }
 /* -------------------------------- 
@@ -443,7 +443,6 @@ a {
   }
 }
 .categories {
-    margin-top: 190px;
     outline: 1px solid #84A9B7;
 }
 .categories a {

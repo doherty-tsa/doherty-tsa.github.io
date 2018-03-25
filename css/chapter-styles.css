@@ -36,7 +36,7 @@ Future Plans
 
 #future-plan {
     background: url(/img/banners/future-plan.jpg);
-    border-bottom: 2px solid #C3C1BF;
+    border-bottom: 2px solid rgba(1,1,1,0);
 }
 
 #section-merger {
@@ -566,7 +566,6 @@ footer {
   @import "https://fonts.googleapis.com/css?family=Open+Sans";
   font-family: 'Open Sans', sans-serif;
   border-top: 18px solid #2F323B;
-    
 }
 footer .centered {
   max-width: 1200px;
@@ -610,8 +609,10 @@ footer .bottom-bar {
   font-size: .8em;
   text-transform: uppercase;
   background: #121518;
-  padding: 15px 0;
-  border-top: 1px solid #C3C1BF;
+  padding: 20px 0;
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.4);
 }
 
 /* Responsive Tablet Sizes */
