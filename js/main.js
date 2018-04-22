@@ -144,7 +144,7 @@ if (!demo2.error) {
 } else {
   console.error(demo2.error);
 }
-var demo3 = new CountUp(countUpElement3, 0, 473, 0, 2.9, options);
+var demo3 = new CountUp(countUpElement3, 0, 500, 0, 2.9, options);
 if (!demo3.error) {
   demo3.start();
 } else {
