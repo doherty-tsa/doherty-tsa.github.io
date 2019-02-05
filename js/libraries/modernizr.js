@@ -1223,7 +1223,7 @@ window.Modernizr = (function( window, document, undefined ) {
                                             // adds styling not present in IE6/7/8/9
                                             'mark{background:#FF0;color:#000}' +
                                             // hides non-rendered elements
-                                            'template{display:none}'
+                                            '{display:none}'
                                          );
           }
           if (!supportsUnknownElements) {
@@ -1250,7 +1250,7 @@ window.Modernizr = (function( window, document, undefined ) {
            * @memberOf html5
            * @type Array|String
            */
-          'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video',
+          'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary  time video',
 
           /**
            * current version of html5shiv
