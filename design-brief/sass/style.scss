@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/*------------------------------------------------
+Style   : Duotone Main CSS
+Version : 1.0
+Author  : Surjith S M
+URI     : http://themeforest.net/user/surjithctly
+
+Copyright © All rights Reserved
+Surjith S M / @surjithctly
+----------------------------------------------------*/
+
+
+/*---------------------------------------------------
+[TABLE OF CONTENTS]
+    
+    1. GLOBAL STYLES
+    2. HEADER
+    3. NAV BAR
+    4. ABOUT
+    5. OUR TEAM 
+    6. FEATURED ALBUM
+    7. TESTIMONIALS 
+    8. EVENT 
+    9. ALBUM LIST
+    10. MEDIA 
+    11. PHOTOS 
+    12. FAN PAGE 
+    13. CONTACT 
+    14. FOOTER 
+    15. BLOG 
+    16. RESPONSIVE STYLES 
+    
+    ----------------------------------------------------*/
+
+//---------------------------------
+// SASS IMPORTS
+//---------------------------------
+@import 'variables';
+@import 'global';
+// Components
+@import 'components/nav';
+@import 'components/header';
+@import 'components/about';
+@import 'components/team';
+@import 'components/album';
+@import 'components/testimonials';
+@import 'components/event';
+@import 'components/album-list';
+@import 'components/media';
+@import 'components/photos';
+@import 'components/fan-page';
+@import 'components/contact';
+@import 'components/footer';
+@import 'components/blog';
+@import 'components/player';
+// Media Query (Responsive Styles)
+@import 'components/responsive';
